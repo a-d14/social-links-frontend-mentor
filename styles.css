@@ -193,6 +193,11 @@ textarea:not([rows]) {
 }
 
 @media (min-width: 768px) {
+
+    .card {
+        padding: var(--spacing-500);
+    }
+
     .attribution {
         font-size: 1rem;
     }
