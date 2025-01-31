@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('./assets/fonts/static/Inter-Regular.ttf');
+}
+
+:root {
+    --grey-900: #141414;
+    --grey-800: #1F1F1F;
+    --grey-700: #333333;
+    --green: #C4F82A;
+    --white: #FFFFFF;
+
+    --text-preset-1: 1.5rem/1.5 'Inter Bold', sans-serif;
+    --text-preset-2: 0.875rem/1.5 'Inter Regular', sans-serif;
+    --text-preset-2-bold: 0.875rem/1.5 'Inter Bold', sans-serif;
+
+    --spacing-500: 2.5rem;
+    --spacing-300: 1.5rem;
+    --spacing-200: 1rem;
+    --spacing-150: 0.75rem;
+    --spacing-100: 0.5rem;
+    --spacing-50: 0.25rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements, which suggests default styling will be removed */
+ul, ol {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 0 var(--spacing-300);
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--grey-900);
+    color: var(--white);
+    font: var(--text-preset-2-bold);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+a {
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.user-profile {
+    gap: var(--spacing-300);
+
+    padding: var(--spacing-300);
+    background-color: var(--grey-800);
+
+    max-width: 24rem;
+    border-radius: var(--spacing-150);
+}
+
+.user-profile > img {
+    display: block;
+    max-width: 5.5rem;
+    height: auto;
+
+    border-radius: 50%;
+}
+
+.user-profile-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-50);
+}
+
+.user-profile-header > h1 {
+    font: var(--text-preset-1);
+}
+
+.user-profile-header > span {
+    color: var(--green);
+}
+
+.user-quote {
+    font: var(--text-preset-2);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: var(--spacing-200);
+}
+
+.link {
+    padding: var(--spacing-150);
+    background-color: var(--grey-700);
+    border-radius: var(--spacing-100);
+}
+
+.link:hover {
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.link a {
+    text-decoration: none;
+}
+
+.link:hover a {
+    color: var(--grey-700);
+}
+
+.attribution {
+    position: absolute;
+    padding: 5% 0;
+    bottom: 0;
+    color: var(--white);
+
+    font: var(--text-preset-2);
+    font-size: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .attribution {
+        font-size: 1rem;
+    }
+}
