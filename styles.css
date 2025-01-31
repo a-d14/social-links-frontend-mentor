@@ -67,6 +67,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--spacing-200);
 
     background-color: var(--grey-900);
     color: var(--white);
@@ -113,28 +114,33 @@ textarea:not([rows]) {
     scroll-margin-block: 5ex;
 }
 
+main {
+    width: 100%;
+}
+
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:center;
 }
 
 .user-profile {
+
+    margin: 0 auto;
+
     gap: var(--spacing-300);
 
     padding: var(--spacing-300);
     background-color: var(--grey-800);
 
     max-width: 24rem;
+    max-height: auto;
     border-radius: var(--spacing-150);
 }
 
 .user-profile > img {
-    display: block;
     max-width: 5.5rem;
+    margin: 0 auto;
     height: auto;
-
     border-radius: 50%;
 }
 
@@ -183,11 +189,7 @@ textarea:not([rows]) {
 }
 
 .attribution {
-    position: absolute;
-    padding: 5% 0;
-    bottom: 0;
     color: var(--white);
-
     font: var(--text-preset-2);
     font-size: 0.5rem;
 }
