@@ -194,7 +194,7 @@ textarea:not([rows]) {
 
 @media (min-width: 768px) {
 
-    .card {
+    .user-profile {
         padding: var(--spacing-500);
     }
 
